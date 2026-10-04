@@ -103,7 +103,10 @@ figure img { border-radius: 10px; border: 1px solid var(--line); }
 figcaption { font: 11px/1.5 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); margin-top: 10px; }
 
 /* modules: the plug-in's cards */
-.modules { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 12px; margin-top: 28px; }
+/* One, two or four across, never three: a lone GRAIN on its own row reads as a leftover. */
+.modules { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 28px; }
+@media (min-width: 520px) { .modules { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 940px) { .modules { grid-template-columns: repeat(4, 1fr); } }
 .module { background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 16px; }
 .module h3 { display: flex; gap: 10px; align-items: center; }
 .module h3 .d { width: 10px; height: 10px; border-radius: 50%; background: var(--c); }
@@ -119,11 +122,15 @@ figcaption { font: 11px/1.5 var(--mono); letter-spacing: .06em; text-transform: 
 .features span { color: var(--perf-muted); font-size: 15px; }
 
 /* get the beta */
-.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; margin-top: 24px; }
-.dl { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; gap: 8px; align-content: start; }
+.dl-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px; margin-top: 24px; container-type: inline-size; }
+/* Each card spans five shared rows (platform, format, details, two buttons), so side by side
+   their lines and first buttons stay level even when one card's details wrap. */
+.dl { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 20px; display: grid; grid-row: span 5; grid-template-rows: subgrid; gap: 8px; align-content: start; }
 .dl .plat { font: 13px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; margin: 0; }
 .dl p { margin: 0; color: var(--ink-soft); font-size: 15px; }
 .dl .size { font: 12px/1.5 var(--mono); color: var(--muted); }
+/* Stacked in one column there is nothing to line up with; drop the shared rows so a short card keeps its own height. */
+@container (max-width: 655px) { .dl { grid-row: auto; grid-template-rows: none; } }
 .btn { display: inline-flex; align-items: center; gap: 10px; justify-self: start; margin-top: 10px; font: 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 13px 18px; border-radius: 7px; border: 1px dashed #b9b7af; color: var(--muted); background: transparent; }
 .btn .pill { font-size: 10px; letter-spacing: .12em; padding: 4px 6px; border-radius: 4px; background: var(--teal); color: var(--field); }
 .btn.later .pill { background: #9aa19c; }
