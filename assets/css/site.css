@@ -30,7 +30,7 @@
   --heat: #cf794e; --sway: #4584b1; --air: #68a58e; --grain: #9280bb;
   --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
   --sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --gutter: clamp(16px, 5vw, 48px);
+  --gutter: clamp(20px, 5.6vw, 48px);
   --measure: 1120px;
   --measure-text: 640px;
 }
@@ -62,6 +62,20 @@ a:hover { border-bottom-color: var(--teal); }
 .topnav { display: flex; gap: clamp(14px, 3vw, 28px); flex-wrap: wrap; }
 .topnav a { font: 11.5px/1 var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); border: 0; padding-block: 8px; }
 .topnav a:hover { color: var(--ink); }
+
+/* Phones: the bar stacks into two rows with room above, between and below; the links stay on
+   one line and scroll sideways if a narrow screen cannot fit them (04.10: the rows sat flush
+   against the top edge and the bottom rule). */
+@media (max-width: 600px) {
+  .topbar .wrap { min-height: 0; padding-block: 14px 10px; row-gap: 10px; }
+  .topnav { width: 100%; flex-wrap: nowrap; gap: 20px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .topnav::-webkit-scrollbar { display: none; }
+  .topnav a { white-space: nowrap; letter-spacing: .08em; padding-block: 6px; }
+}
+@media (max-width: 360px) {
+  .topnav { gap: 13px; }
+  .topnav a { letter-spacing: .03em; font-size: 11px; }
+}
 
 /* ---------- hero ---------- */
 .hero { padding-block: clamp(40px, 7vw, 80px) clamp(28px, 4vw, 44px); }
