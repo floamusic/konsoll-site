@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KONSOLL by Fløa — four modules that move with the track</title>
+<meta name="description" content="KONSOLL is a four-module multi-FX instrument by Fløa: HEAT, SWAY, AIR and GRAIN, with Trace, Hold, Scenes and 51 factory presets. Audio Unit and VST3 for Apple Silicon Macs. Public beta soon.">
+<meta name="theme-color" content="#e8e6de">
+<link rel="stylesheet" href="assets/css/site.css">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KONSOLL by Fløa">
+<meta property="og:description" content="Four effect modules that move with the track. Audio Unit and VST3.">
+<meta property="og:image" content="assets/img/konsoll.jpg">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<a class="skip" href="#what">Skip to content</a>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brandline">
+      <a class="crumb" href="/" aria-label="Fløa, all instruments">← FLØA</a>
+      <span class="crumb-sep" aria-hidden="true">/</span>
+      <a class="wordmark-link" href="#top"><img src="assets/img/konsoll-wordmark.svg" width="104" height="18" alt="KONSOLL"></a>
+    </div>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#what">Modules</a>
+      <a href="#moves">Moves</a>
+      <a href="#beta">Get the beta</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap">
+      <img class="mark" src="assets/img/konsoll-wordmark.svg" width="320" height="54" alt="KONSOLL">
+      <p class="eyebrow">Multi-FX instrument · by Fløa</p>
+      <h1>Four modules that move with the track.</h1>
+      <p class="lede">Drive, movement, space and texture in one plug-in. Each module plays one of five effects; Trace, Hold and Scenes keep them moving while you play.</p>
+      <ul class="chips" aria-label="At a glance">
+        <li class="soon">Beta · v0.9.0 · soon</li>
+        <li>AU · VST3</li>
+        <li>macOS · Apple Silicon</li>
+      </ul>
+      <figure class="hero-shot">
+        <img src="assets/img/konsoll.jpg"
+             srcset="assets/img/konsoll.jpg 1920w, assets/img/konsoll@2x.jpg 2560w"
+             sizes="(max-width: 1120px) 100vw, 1120px"
+             width="1920" height="1209"
+             alt="The KONSOLL interface playing the Backwards Halo preset: four modules, HEAT, SWAY, AIR and GRAIN, each with a coloured field and two knobs, above the Trace, Hold and Master sections.">
+        <figcaption>Backwards Halo · Warm, Vibrato, Reverse and Filter on two paths</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">01</span>Modules</p>
+      <div class="text">
+        <h2>One card, one effect at a time</h2>
+        <p>Each module has a main control, AMOUNT for how much you hear, and a second page for the finer controls. Put the cards in any order by dragging them, or wire them as two paths, centre and sides, or a feedback loop.</p>
+      </div>
+      <div class="modules" aria-label="The four modules">
+        <div class="module" style="--c: var(--heat)">
+          <h3><span class="d" aria-hidden="true"></span><span class="n">01</span>Heat</h3>
+          <p>Drive and colour.</p>
+          <p class="fx">Drive · Fuzz · Warm · Wail · Bloom</p>
+        </div>
+        <div class="module" style="--c: var(--sway)">
+          <h3><span class="d" aria-hidden="true"></span><span class="n">02</span>Sway</h3>
+          <p>Movement and pitch.</p>
+          <p class="fx">Twin · Vibrato · Tremolo · Phaser · Shift</p>
+        </div>
+        <div class="module" style="--c: var(--air)">
+          <h3><span class="d" aria-hidden="true"></span><span class="n">03</span>Air</h3>
+          <p>Echoes and space.</p>
+          <p class="fx">Delay · Reverb · Reverse · Spool · Splice</p>
+        </div>
+        <div class="module" style="--c: var(--grain)">
+          <h3><span class="d" aria-hidden="true"></span><span class="n">04</span>Grain</h3>
+          <p>Filter, tape and texture.</p>
+          <p class="fx">Filter · Tape · Warp · Press · Static</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="moves">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">02</span>Moves with the track</p>
+      <div class="split">
+        <div class="text">
+          <h2>Everything can move on its own</h2>
+          <p>Trace records the knobs you turn and loops them in time with the host. Hold records a moment of audio and loops it. Scenes store whole sounds and morph between them, by hand or over bars of the song. A sidechain from another track can move any control.</p>
+          <p>A bypassed module mists over rather than going dark, so you can see at a glance what is playing.</p>
+        </div>
+        <figure>
+          <img src="assets/img/konsoll-bypass.jpg" width="1280" height="806" loading="lazy"
+               alt="KONSOLL playing the Rhythm Morph preset: Drive, Tremolo and Filter lit, the bypassed AIR module covered in a soft mist.">
+          <figcaption>Rhythm Morph · AIR bypassed</figcaption>
+        </figure>
+      </div>
+      <div class="perf">
+        <ul class="features">
+          <li><b>Trace</b><span>Loops your knob movements over 1, 2 or 4 bars, locked to the host tempo.</span></li>
+          <li><b>Hold</b><span>Hold to record a moment of audio, release to loop it, before or after the effects.</span></li>
+          <li><b>Scenes &amp; Evolve</b><span>Four stored sounds, and a morph between two of them.</span></li>
+          <li><b>Routing &amp; sidechain</b><span>Chain, two paths, centre and sides, or a feedback loop; another track can move any control.</span></li>
+          <li><b>51 factory presets</b><span>Loudness matched, so they differ by character, not level. Tuned by ear in blind tests.</span></li>
+          <li><b>Guard</b><span>Keeps the output under its ceiling and shows when it acts.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="beta">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">03</span>Get the beta</p>
+      <div class="text">
+        <h2>KONSOLL v0.9.0 is coming soon</h2>
+        <p>Free, no account, no key. The installer and the plug-in will be unsigned, so your Mac will ask once whether you meant to open them; the install guide walks through exactly that.</p>
+      </div>
+      <div class="dl-grid">
+        <div class="dl">
+          <p class="plat">macOS</p>
+          <p>Installer package · Audio Unit + VST3</p>
+          <p class="size">.pkg · Apple Silicon (M1 or later) · macOS 11+</p>
+          <span class="btn" role="link" aria-disabled="true">Download <span class="pill">Soon</span></span>
+          <span class="btn" role="link" aria-disabled="true">Install guide <span class="pill">Soon</span></span>
+        </div>
+        <div class="dl">
+          <p class="plat">Windows</p>
+          <p>VST3</p>
+          <p class="size">Windows x64</p>
+          <span class="btn later" role="link" aria-disabled="true">Download <span class="pill">Later</span></span>
+        </div>
+      </div>
+      <div class="note"><p>This will be a beta: tested by ear and by machine, but not finished. Intel Macs are not supported. If something feels off or confusing, I want to hear about it.</p></div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow"><span class="num">04</span>Support and contact</p>
+      <div class="text"><p>KONSOLL is made by one person. Bug reports, confusion and “this should work differently” are equally welcome; support goes straight into the time this takes.</p></div>
+      <div class="link-rows">
+        <div class="link-row"><span class="k">Ko-fi</span><a href="https://ko-fi.com/floamusic" rel="noopener">ko-fi.com/floamusic</a></div>
+        <div class="link-row"><span class="k">Boosty</span><a href="https://boosty.to/floamusic/donate" rel="noopener">boosty.to/floamusic</a></div>
+        <div class="link-row"><span class="k">Instagram</span><a href="https://instagram.com/floamusic" rel="noopener">@floamusic</a></div>
+        <div class="link-row"><span class="k">Telegram</span><a href="https://t.me/floamusic" rel="noopener">@floamusic</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><a href="/">Fløa</a> · KONSOLL</span>
+    <span>Font: <a href="assets/fonts/OFL-GeistMono.txt">Geist Mono</a>, SIL Open Font License</span>
+  </div>
+</footer>
+</body>
+</html>
