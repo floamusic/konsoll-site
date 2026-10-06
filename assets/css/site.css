@@ -118,7 +118,7 @@ figcaption { font: 11px/1.5 var(--mono); letter-spacing: .06em; text-transform: 
 /* features on the dark performance panel, as Trace / Hold / Master sit in the plug-in */
 .perf { background: var(--perf); color: var(--perf-ink); border-radius: 10px; padding: clamp(18px, 3vw, 28px); margin-top: 28px; }
 .features { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 0 32px; }
-.features li { padding: 14px 0; border-bottom: 1px solid rgba(240, 239, 232, .14); display: grid; gap: 4px; }
+.features li { padding: 14px 0; border-bottom: 1px solid rgba(240, 239, 232, .14); display: grid; gap: 4px; align-content: start; }
 .features b { font: 400 13px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
 .features span { color: var(--perf-muted); font-size: 15px; }
 
