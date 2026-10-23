@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "Geist Mono";
-  src: url("../fonts/GeistMono-Regular.ttf") format("truetype");
+  src: url("../fonts/GeistMono-Regular.woff2") format("woff2"), url("../fonts/GeistMono-Regular.ttf") format("truetype");
   font-weight: 400; font-style: normal; font-display: swap;
 }
 
@@ -34,6 +34,10 @@
   --measure: 1120px;
   --measure-text: 640px;
 }
+
+/* Pages on floamusic.github.io cross-fade into one another where the browser can (all of them
+   opt in; elsewhere the link just loads). */
+@media (prefers-reduced-motion: no-preference) { @view-transition { navigation: auto; } }
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }

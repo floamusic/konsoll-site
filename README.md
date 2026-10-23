@@ -7,8 +7,8 @@ Live (once published): <https://floamusic.github.io/konsoll-site/> · all instru
 | --- | --- |
 | `index.html` | Home — modules, what moves, get the beta (SOON), support and contact |
 | `assets/css/site.css` | Single stylesheet in the plug-in's Soft Strata palette |
-| `assets/fonts/` | Geist Mono (SIL OFL, licence included) |
-| `assets/img/` | Interface renders from the product repo (`Konsoll_DSPTests --render-promo <file> [preset]`, 2x, footer cropped so no version is pictured) and the wordmark |
+| `assets/fonts/` | Geist Mono as WOFF2 (TTF kept as fallback), SIL OFL, licence included |
+| `assets/img/` | Interface renders from the product repo (`Konsoll_DSPTests --render-promo <file> [preset]`, 2x, footer cropped so no version is pictured) and the wordmark. Each render also as AVIF (Pillow, quality 78, 4:4:4), 3–4 times lighter; the JPEGs stay as the fallback. `konsoll-1080` is the phone size |
 
 Static HTML/CSS, no build step, nothing from a CDN. The product source is private (`floamusic/Konsoll`); nothing here is generated from it.
 

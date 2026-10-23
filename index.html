@@ -9,11 +9,12 @@
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/css/site.css?v=9">
+<link rel="preload" href="assets/fonts/GeistMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/site.css?v=10">
 <meta property="og:type" content="website">
 <meta property="og:title" content="KONSOLL by Fløa">
 <meta property="og:description" content="Four effect modules that move with the track. Audio Unit and VST3.">
-<meta property="og:image" content="assets/img/konsoll.jpg">
+<meta property="og:image" content="https://floamusic.github.io/konsoll-site/assets/img/konsoll.jpg">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 <body>
@@ -50,11 +51,15 @@
         <li>macOS · Apple Silicon</li>
       </ul>
       <figure class="hero-shot">
-        <img src="assets/img/konsoll.jpg?v=2"
-             srcset="assets/img/konsoll.jpg?v=2 1920w, assets/img/konsoll@2x.jpg?v=2 2560w"
-             sizes="(max-width: 1120px) 100vw, 1120px"
-             width="1920" height="1209"
-             alt="The KONSOLL interface playing the Backwards Halo preset: four modules, HEAT, SWAY, AIR and GRAIN, each with a coloured field and two knobs, above the Trace, Hold and Master sections.">
+        <picture>
+          <source type="image/avif" sizes="(max-width: 1120px) 100vw, 1120px"
+                  srcset="assets/img/konsoll-1080.avif 1080w, assets/img/konsoll.avif 1920w, assets/img/konsoll@2x.avif 2560w">
+          <img src="assets/img/konsoll.jpg?v=2"
+               srcset="assets/img/konsoll-1080.jpg 1080w, assets/img/konsoll.jpg?v=2 1920w, assets/img/konsoll@2x.jpg?v=2 2560w"
+               sizes="(max-width: 1120px) 100vw, 1120px"
+               width="1920" height="1209" fetchpriority="high"
+               alt="The KONSOLL interface playing the Backwards Halo preset: four modules, HEAT, SWAY, AIR and GRAIN, each with a coloured field and two knobs, above the Trace, Hold and Master sections.">
+        </picture>
         <figcaption>Backwards Halo · Warm, Vibrato, Reverse and Filter on two paths</figcaption>
       </figure>
     </div>
@@ -102,8 +107,11 @@
           <p>A bypassed module mists over rather than going dark, so you can see at a glance what is playing.</p>
         </div>
         <figure>
-          <img src="assets/img/konsoll-bypass.jpg?v=2" width="1280" height="806" loading="lazy"
-               alt="KONSOLL playing the Rhythm Morph preset: Drive, Tremolo and Filter lit, the bypassed AIR module covered in a soft mist.">
+          <picture>
+            <source type="image/avif" srcset="assets/img/konsoll-bypass.avif">
+            <img src="assets/img/konsoll-bypass.jpg?v=2" width="1280" height="806" loading="lazy" decoding="async"
+                 alt="KONSOLL playing the Rhythm Morph preset: Drive, Tremolo and Filter lit, the bypassed AIR module covered in a soft mist.">
+          </picture>
           <figcaption>Rhythm Morph · AIR bypassed</figcaption>
         </figure>
       </div>
@@ -165,7 +173,7 @@
 
 <footer>
   <div class="wrap">
-    <span><a href="/">Fløa</a> · KONSOLL</span>
+    <span><a href="/">Fløa</a> · KONSOLL · also <a href="/floating-site/">FLOATING</a> and <a href="/music/">the music</a></span>
     <span>Font: <a href="assets/fonts/OFL-GeistMono.txt">Geist Mono</a>, SIL Open Font License</span>
   </div>
 </footer>
